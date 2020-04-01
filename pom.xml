@@ -6,12 +6,21 @@
 	<artifactId>testsUnitaires</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+			</plugin>
+		</plugins>
+	</build>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<jsf.version>2.1.7</jsf.version>
-		<jenkins-test-harness.version>2.34</jenkins-test-harness.version>
 	</properties>
 
 	<dependencies>
@@ -80,31 +89,7 @@
 			<artifactId>all-themes</artifactId>
 			<version>1.0.10</version>
 		</dependency>
-		
-	<dependency>
-	  <groupId>org.jenkins-ci.plugins.workflow</groupId>
-	  <artifactId>workflow-basic-steps</artifactId>
-	  <scope>test</scope>
-	</dependency>
-
-	<dependency>
-	  <groupId>org.jenkins-ci.plugins.workflow</groupId>
-	  <artifactId>workflow-cps</artifactId>
-	  <scope>test</scope>
-	</dependency>
-
-	<dependency>
-	  <groupId>org.jenkins-ci.plugins.workflow</groupId>
-	  <artifactId>workflow-durable-task-step</artifactId>
-	  <scope>test</scope>
-	</dependency>
-
-	<dependency>
-	  <groupId>org.jenkins-ci.plugins.workflow</groupId>
-	  <artifactId>workflow-job</artifactId>
-	  <scope>test</scope>
-	</dependency>
-</dependencies>
+	</dependencies>
 
 	<repositories>
 		<repository>
